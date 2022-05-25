@@ -7,7 +7,6 @@ export const Card = (props: any) => (
         <img className="card-img-top" src={`https://robohash.org/${props.monster.id}?set=set2&size=180x180`} alt="monster" />
         <h5 className="card-title">{props.monster.name}</h5>
         <p className="card-text">{props.monster.email}</p>
-        {/* <a href="#" className="btn btn-primary">Go somewhere</a> */}
       </div>
     </div>
   </div>
