@@ -1,12 +1,15 @@
 import React from 'react';
 
 export const Card = (props: any) => (
-    <div className="container">
-      <img
-        alt="monster"
-        src={`https://robohash.org/${props.monster.id}?set=set2&size=180x180`}
-      />
-      <h2> {props.monster.name} </h2>
-      <p> {props.monster.email} </p>
+  <div className='container'>
+    <div className="card text-center ">
+      <div className="card-body">
+        <img className="card-img-top" src={`https://robohash.org/${props.monster.id}?set=set2&size=180x180`} alt="monster" />
+        <h5 className="card-title">{props.monster.name}</h5>
+        <p className="card-text">{props.monster.email}</p>
+        {/* <a href="#" className="btn btn-primary">Go somewhere</a> */}
+      </div>
     </div>
+  </div>
+
 );
