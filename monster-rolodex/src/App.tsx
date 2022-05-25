@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-
+import { CardList } from './components/CardList/CardList.component';
+//https://jsonplaceholder.typicode.com/users?_limit=3
 
 function App() {
-  const [users, setUsers] = useState([null]);
+  const [monsters, setMonsters] = useState([] as any);
 
   const fetchData = () => {
     fetch("https://jsonplaceholder.typicode.com/users")
@@ -10,17 +11,22 @@ function App() {
         return response.json()
       })
       .then(data => {
-        setUsers(data);
-        console.log(data);
+        setMonsters(data as any);
       })
   }
-  
+
   useEffect(() => {
     fetchData()
   }, []);
 
   return (
-    <div><h1>Hello World!!</h1></div>
+    <>
+    <div className='container'>
+      <div className='row'>
+      <CardList monsters={monsters} />
+      </div>
+      </div>
+    </>
   );
 }
 
