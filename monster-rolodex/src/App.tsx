@@ -1,7 +1,7 @@
 import React, { Component, useEffect, useState } from 'react';
+import { Title } from './App.style';
 import { CardList } from './components/CardList/CardList.component';
 import { SearchBox } from './components/SearchBox/SearchBox.component';
-//https://jsonplaceholder.typicode.com/users?_limit=3
 
 class App extends Component {
   constructor(props: any) {
@@ -33,7 +33,8 @@ class App extends Component {
       <div className="App">
         <div className='container'>
           <div className='row text-center'>
-            <h1>Monsters Rolodex</h1>
+            <Title>Monsters Rolodex</Title>
+            {/* <h1></h1> */}
           </div>
           <br></br>
           <div className='row text-center'>
