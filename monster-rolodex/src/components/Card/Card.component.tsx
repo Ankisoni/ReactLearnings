@@ -1,6 +1,8 @@
 import React from 'react';
+import { ContainerDiv } from './Card.style';
 
 export const Card = (props: any) => (
+  <ContainerDiv>
   <div className='container'>
     <div className="card text-center ">
       <div className="card-body">
@@ -10,5 +12,5 @@ export const Card = (props: any) => (
       </div>
     </div>
   </div>
-
+  </ContainerDiv>
 );

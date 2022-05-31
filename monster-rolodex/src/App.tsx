@@ -1,12 +1,11 @@
 import React, { Component, useEffect, useState } from 'react';
-import { Title } from './App.style';
+import { ContainerDiv, Title } from './App.style';
 import { CardList } from './components/CardList/CardList.component';
 import { SearchBox } from './components/SearchBox/SearchBox.component';
 
 class App extends Component {
   constructor(props: any) {
     super(props);
-
     this.state = {
       monsters: [],
       searchField: '',
@@ -30,25 +29,24 @@ class App extends Component {
     );
 
     return (
-      <div className="App">
+        <ContainerDiv>
         <div className='container'>
           <div className='row text-center'>
             <Title>Monsters Rolodex</Title>
-            {/* <h1></h1> */}
           </div>
           <br></br>
           <div className='row text-center'>
             <SearchBox
               placeholder="Search Monsters"
-              handleChange={this.handleChange}
-            />
+              handleChange={this.handleChange}/>
           </div>
           <br></br>
           <div className='row'>
             <CardList monsters={filteredMonsters} />
           </div>
         </div>
-      </div>
+        </ContainerDiv>
+      
     );
   }
 }
